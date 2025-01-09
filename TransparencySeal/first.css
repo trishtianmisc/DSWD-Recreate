@@ -1,0 +1,421 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Slight zoom-in effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* Full screen height */
+    margin: 0; /* Remove default margin */
+    background-image: url(img-header.jpg);
+  }
+  
+  /* Create a pseudo-element for the blurred background */
+  body::before {
+    content: ''; /* Necessary for creating an empty block */
+    position: absolute; /* Position it over the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Flag.png');
+    filter: blur(5px);
+    
+    z-index: -1;
+  }
+
+  .navbar {
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: rgb(40, 40, 41)!important;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+}
+
+
+
+
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 70%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected{
+
+    display:flex; 
+    flex-direction: row; 
+    gap: 10px;
+
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+    
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+
+
+/*FIRST CONTAINER*/
+.col-md-12.text-center {
+    margin-left: 100px; /* Adjust the value as needed */
+    margin-right: 100px; /* Adjust the value as needed */
+}
+.first-container {
+    
+    
+    height: 100vh;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+    
+}
+
+.img {
+    
+}
+.font-we {
+
+    margin-top: 80px;
+
+}
+.font-we h1{
+    font-weight: 900;
+}
+.font-we strong{
+    font-weight: 800;
+}
+.row-wrapper{
+    justify-content: center;
+    gap: 40px;
+}
+.font-size{
+    font-size: 23px;
+}
+.first-container img{
+    width: 100px;
+   
+}
+.row-wrapper h1{
+    margin-left: 50px;
+    color: black;
+ 
+   
+}
+.first-container a{
+    text-decoration: none;
+    color:black;
+    
+}
+
+.bot{
+    margin-bottom: 20px;
+}
+.bots{
+    margin-bottom: 200px;
+}
+
+.backs{
+    background-color: rgb(180, 198, 255);;
+    border-radius: 20px;
+    padding: 10px;
+}
+.back{
+    border: 2px solid rgb(180, 198, 255);
+    padding: 5px;
+}
+
+.first-container a:hover {
+    color: blue; /* Change color to blue on hover */
+    text-decoration: underline; /* Optional: add underline */
+}
+
+.top{
+    margin-top: 50px;
+}
+.background-color{
+   
+    border-radius: 20px;
+ 
+    
+    
+}
+.hidden{
+    height: 100vh;
+}
+.second-container{
+    height: 450vh;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.row-wrapper2{
+    justify-content: center;
+    gap: 40px;
+}
+.third-container{
+    
+    height: 100vh;
+}
+
+
+.row-wrapper2 img{
+    border-radius: 10px; 
+    background-color: rgb(194, 170, 142); 
+    padding: px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+
+}
+
+/*END OF CONTAINER*/
+
+.colors{
+    color: black;
+}
+.list-item {
+    height: 100px; /* Set consistent height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(180, 198, 255);; /* Optional for visualization */
+    margin-bottom: 10px;
+  }
+  
+  .list-item li {
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .list-item a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .list-item a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+
+
+  .bottom-images {
+
+    margin-top: 50px;
+    border-top: 1px solid   rgb(180, 198, 255);;
+    border-bottom: 1px solid   rgb(180, 198, 255);
+
+}
+.bottom-images .carousel-item img{
+
+
+    height: 200px;
+    margin-bottom: 15px;
+
+
+}
+
+
+
+
+
+
+
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+    .search-bar{
+        margin-top: 300px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+
+   
+        
+        width: 100%;
+    
+    }
+    .font-we{
+        margin-top: 0px;
+    }
+
+    .first-container{
+        height: 230vh;
+    }
+    .second-container{
+        height: 1600vh;
+    }
+   
+    
+    .navbar-nav {
+    
+        margin-left: 0px;
+        
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+    
+    }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .footer-container .stay-connected{
+
+        margin-left: 51px;
+    
+    }
+    .row-wrapper h1{
+        text-align: center;
+    }
+
+    .bottom-images .carousel-item img{
+
+
+        height: 130px;
+        margin-bottom: 15px;
+    
+    
+    }
+
+  }

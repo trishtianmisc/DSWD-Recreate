@@ -1,0 +1,608 @@
+/* For animation combined sa jsript */
+.scale-fade {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1.5s ease, transform 0.5s ease;
+}
+
+
+.scale-fade.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body { /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* put to 100vh for */
+    margin-top: 0; /* Remove default margin */
+    
+  }
+  
+  body::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0F172A;
+    background-image: url('Images/Blue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  } 
+
+  /* .video-container {
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 57px); 
+    overflow: hidden; 
+  }
+  
+  .video-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  } */
+
+.navbar {
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: rgb(40, 40, 41)!important;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+}
+
+
+
+.land-container {
+
+    
+    height: 100vh; 
+
+    
+   
+}
+
+.land-wrapper {
+
+ 
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+
+
+.land-wrapper:hover {
+
+    transform: translateY(-10px); 
+
+  }
+
+
+
+
+.land-wrapper .feature-box2 {
+    
+
+
+
+    color: white;
+
+    text-shadow: 
+    -1px -1px 0px black, /* Top-left shadow */
+    1px -1px 0px black,  /* Top-right shadow */
+    -1px 1px 0px black,  /* Bottom-left shadow */
+    1px 1px 0px black;   /* Bottom-right shadow */
+
+}
+
+.land-wrapper .feature-box2 h1 {
+
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 45px;
+    
+
+}
+
+.land-wrapper .feature-box2 p {
+
+    text-align: justify;
+    font-weight: 300;
+    font-size: 20px;
+
+}   
+
+
+
+.test-wrapper {
+    
+    
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    border: 1px solid gray;
+    
+
+}
+
+.test-wrapper:hover {
+
+background-color: rgb(246, 242, 242);
+
+}
+
+.test-container {
+
+    height: 100vh;
+
+}
+
+
+.test-wrapper img{
+
+    height: 600px;
+    width: 100%;
+    
+
+
+}
+
+
+.second-container {
+
+    
+
+    height: 75vh;
+    /* background-color: #0F172A;
+    background-image: url('Bgds.jpg'); */
+    background-position: center;
+    background-image: url('Flag.png');
+    border: 1px solid  rgb(180, 198, 255);
+    background-color: rgb(180, 198, 255);
+    
+
+}
+
+.second-wrapper {
+
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 2px rgb(0, 0, 0);
+    width: 88%;
+    
+
+}
+
+
+.news-title h4 {
+
+    background-color: black;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.first-news {
+
+    display: none;
+
+}
+
+
+.first-news.active {
+
+    display: flex;
+
+}
+
+.first-news .allnews{
+
+    width: 350px;
+    margin-top: 15px;
+    margin-left: 50px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 2px rgb(146, 146, 146);
+    font-size: 14px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1.5s ease;
+
+}
+
+.first-news .allnews.show {
+
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.first-news .allnews:hover {
+
+    transform: translateY(-10px); 
+
+  }
+
+
+
+.first-news .allnews img {
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 230px;
+    width: 100%;
+
+}
+
+.first-news .allnews p span {
+
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2ba6cb;
+    
+
+}
+
+.first-news .allnews p {
+
+    width: 93%;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 16px;
+    text-align: left;
+    color: gray;
+
+}
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Images/Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer-container .stay-connected a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+
+
+@media screen and (max-width: 470px) {
+
+    .second-container {
+
+        height: 30vh;
+
+    }
+
+
+}
+
+@media screen and (max-width: 1500px){
+
+    .navbar-nav {
+
+        margin-left: 400px;
+    
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .second-container {
+
+    
+        height: 65vh !important;
+      
+    
+    }
+
+    .land-container {
+        
+        margin-top: 130px !important;
+        height: 60vh !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    body::before {
+        
+        height: 100vh;
+        left: -350px;
+      }
+
+    .dswd-nav {
+
+        margin-left: 0px;
+    }
+
+    .navbar-nav {
+
+        margin-left: 0px;
+
+    }
+    
+
+    .navbar li:hover{
+        border-bottom: 1px solid white;
+    
+    }
+
+    .land-container {
+        margin-top: 100px;
+        height: 60vh; /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+      }
+
+    .land-container .feature-box2 h1 {
+        
+        text-shadow: none;
+        color: white;
+        font-size: 35px;
+        
+    }
+
+    .land-container .feature-box2 p {
+
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+        text-shadow: none; 
+
+    }
+
+    .land-wrapper .row {
+
+        opacity: 1;
+        
+    
+      }
+
+    .test-container {
+
+        height: 50vh;
+
+    }
+
+    .test-wrapper img{
+
+        height: 200px;
+        width: 100%;
+    
+    
+    }
+
+    .second-container {
+
+    
+        height: 80vh;
+      
+    
+    }
+
+    .second-container .second-wrapper {
+
+        width: 100%;
+
+    }
+
+    .second-container .second-wrapper p{
+
+        font-size: 12px;
+    
+    }
+
+    .second-container .second-wrapper p span{
+
+        font-size: 13px;
+    
+    }
+
+    .first-news .allnews{
+
+        width: 650px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+        background-color: #f8f8f8;
+        border-radius: 15px;
+        box-shadow: 0 0 20px 2px rgb(0, 0, 0);
+        
+    
+    }
+
+    
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+    
+    }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .republic p{
+
+        height: 80px !important;
+
+    }
+  
+    
+
+  }
