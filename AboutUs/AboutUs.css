@@ -1,0 +1,466 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        /* Slight zoom-in effect */
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+body {
+    position: relative;
+    /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh;
+    /* Full screen height */
+    margin: 0;
+    /* Remove default margin */
+    background-color: white;
+}
+
+
+.navbar {
+
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+   
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: black;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+}
+
+
+.body-container {
+
+    background-color: white;
+    height: 100vh;
+    margin-top: 10px;
+
+
+}
+
+.body-row .hey{
+
+    padding: 10px;
+    border: 1px solid rgb(210, 205, 205);
+    box-shadow: inset 0 0 5px 1px     rgb(180, 198, 255);
+
+}
+.body-row img {
+
+    height: 550px;
+    width: 1330px;
+
+}
+
+/* General wrapper styling */
+
+
+
+
+.dswdimg {
+
+    width: 100%;
+
+}
+
+
+.about-us-title {
+
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 25px;
+
+
+
+
+}
+
+/* Vision Section Styling */
+.vision {
+    position: relative;
+    background-color: white;
+    color: black;
+    text-align: left;
+    
+
+}
+
+.vision-row {
+
+    border: 1px solid black;
+    padding: 15px;
+    box-shadow: inset 0 0 5px 1px     rgb(180, 198, 255);
+    width: 100%;
+
+}
+
+.vision h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vision p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Mission Section Styling */
+.mission {
+    position: relative;
+    background-color: white;
+    color: black;
+    margin-top: 15px;
+}
+
+.mission-row {
+
+    border: 1px solid black;
+    padding: 15px;
+    box-shadow: inset 0 0 5px 1px     rgb(180, 198, 255);
+    width: 100%;
+
+}
+
+.mission h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Core Values Section Styling */
+.core-values {
+    position: relative;
+    background-color: white;
+    color: black;
+    margin-top: 17px;
+    text-align: left;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.core-row {
+
+    border: 1px solid black;
+    padding: 15px;
+    box-shadow: inset 0 0 5px 1px     rgb(180, 198, 255);
+    width: 100%;
+
+}
+
+.core-values h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.bottom-images {
+
+    margin-top: 50px;
+    border-top: 1px solid   rgb(180, 198, 255);;
+    border-bottom: 1px solid   rgb(180, 198, 255);
+
+}
+.bottom-images .carousel-item img{
+
+
+    height: 200px;
+    margin-bottom: 15px;
+
+
+}
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer-container .stay-connected a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+@media screen and (max-width: 1500px){
+
+    .navbar-nav {
+
+        margin-left: 400px;
+    
+    }
+
+}
+
+/* Mobile and Smaller Screens - Responsive */
+@media (max-width: 768px) {
+
+    .navbar-nav {
+
+        margin-left: 0;
+
+    }
+
+    .dswd-nav {
+
+        margin-left: 0px;
+    }
+
+
+    .navbar li:hover {
+        border-bottom: 1px solid white;
+
+    }
+
+
+    .dswdimg {
+
+
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+    .vision-row {
+        width: 100%;
+    }
+
+    .mission-row {
+
+        width: 100%;
+
+    }
+
+    .core-row {
+
+        width: 100%;
+
+    }
+
+    .logo-dswd {
+        width: 40%;
+        top: 50px;
+        left: 20px;
+    }
+
+    .badge-dswd {
+        width: 25%;
+        right: 8%;
+        top: 53px;
+    }
+
+    .about-us-title {
+        font-size: 2rem;
+     
+      margin-left: 0;
+      
+
+    }
+
+
+    .vision h2,
+    .mission h2,
+    p {
+        text-align: center;
+    }
+
+    .carousel-item img {
+        max-width: 100vw;
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+    
+    }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .republic p{
+
+        height: 80px !important;
+
+    }
+
+
+    .bottom-images .carousel-item img{
+
+
+        height: 130px;
+        margin-bottom: 15px;
+    
+    
+    }
+    .body-row img {
+
+        height: 350px;
+        width: 1330px;
+    
+    }
+
+    .body-container {
+        height: 73vh;
+    }
+}
+

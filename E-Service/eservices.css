@@ -1,0 +1,440 @@
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* put to 100vh for */
+    margin: 0; /* Remove default margin */
+    
+  }
+
+
+  
+.navbar {
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: rgb(40, 40, 41)!important;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+}
+
+
+.header-container{
+
+    margin-top: 80px;
+  
+    
+}
+.row1
+{
+        border-radius: 3px;
+        justify-content: center;
+        border: 1px solid black;
+        border-color: #0F172A;
+        text-align: center;
+        align-content: center;
+       
+        
+}
+    
+    
+    .row1 p{
+     margin-top: 20px;
+     margin-bottom: 20px;
+    
+    }
+    .row2
+    {
+        border-radius: 3px;
+        justify-content: center;
+        border: 1px solid black;
+        border-color: #0F172A;
+        text-align: center;
+        align-content: center;
+        
+    }
+    .e-services{
+    margin-bottom: 10px;
+    
+    }
+    .applications{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+    }
+    .applications h4{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    
+    }
+    .img1{
+        margin-top: 5px;
+        margin-bottom: 4px;
+        width: 100px; /* Adjust image size */
+        height: 80px; 
+    }
+    .img2{
+    
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 100px; /* Adjust image size */
+        height: 80px; 
+    }
+    .travel{
+        margin-bottom: 40px;
+    }
+    .img3{
+    
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 100px; /* Adjust image size */
+        height: 80px; 
+    }
+    .p1{
+    margin-top: 10px;
+    
+    }
+    .img{
+        
+        margin-left: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+.dswd-e-service {
+    margin-bottom: 10px;
+}
+
+.dswd-e-service h1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+.red-banner {
+    background-color: #e60000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item label {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+}
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+.faq-item input[type="checkbox"]:checked ~ ol {
+    display: block;
+}
+
+
+
+
+.faq-item1 {
+    margin-bottom: 20px;
+}
+
+.faq-item1 label {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(2, 80, 153);
+    cursor: pointer;
+}
+.faq-item1 input[type="checkbox"] {
+    display: none;
+}
+.faq-item1 input[type="checkbox"]:checked ~ ol {
+    display: block;
+}
+.faq-item1 input[type="checkbox"]:checked ~ ul {
+    display: block; /* Show when the checkbox is checked */
+}
+
+
+
+
+ol {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: none; /* Initially hidden */
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc; /* Add bullet points */
+    display: none; /* Hidden by default */
+}
+
+ul.navbar-nav {
+
+     margin-top: 0px;
+     padding-left: 0px;
+}
+
+
+
+
+.centered-label {
+    display: block; /* Ensures the label takes up the full width of its container */
+    text-align: center; /* Centers the text horizontally */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 16px; /* Adjusts the font size */
+    margin: 10px 0; /* Adds spacing above and below */
+}
+
+
+
+.outer-box {
+    border: 2px solid #0F172A; /* Set border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add spacing inside the box */
+    margin: 20px auto; /* Add space around the box */
+    max-width: 800px; /* Set a maximum width for the box */
+    background-color: #f9f9f9; /* Optional: Add a light background */
+    text-align: left; /* Align text to the left */
+  }
+  .outer-box p {
+    margin: 10px 0; /* Add space between the paragraphs */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+
+
+
+
+
+
+.blue-banner {
+    background-color: #d6e4ff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Images/Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer-container .stay-connected a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+.bottom-images {
+
+    margin-top: 50px;
+    border-top: 1px solid   rgb(180, 198, 255);;
+    border-bottom: 1px solid   rgb(180, 198, 255);
+
+}
+.bottom-images .carousel-item img{
+
+
+    height: 200px;
+    margin-bottom: 15px;
+
+
+}
+    @media screen and (max-width: 768px) {
+    
+        .dswd-nav {
+
+            margin-left: 0px;
+        }
+    
+        .navbar-nav {
+    
+            margin-left: 0px;
+    
+        }
+        
+    
+        .navbar li:hover{
+            border-bottom: 1px solid white;
+        
+        }
+        
+        .footer-container {
+            font-size: 12px;
+            height: 120vh;
+            background-color: #0F172A;
+        
+        }
+        
+        .footer-container .page-link {
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+    
+        .footer-container .biniimg {
+    
+            width: 30%;
+    
+        }
+    
+        .footer-container .stay-connected{
+    
+            margin-left: 51px;
+        
+        }
+
+        .bottom-images .carousel-item img{
+
+
+            height: 130px;
+            margin-bottom: 15px;
+        
+        
+        }
+    }
