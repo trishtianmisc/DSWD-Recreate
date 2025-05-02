@@ -24,6 +24,133 @@
 
 }
 
+#h-hover:hover {
+    color: rgb(19, 19, 87);
+}
+
+#a-hover:hover {
+    color: rgb(11, 80, 11);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+input[type="submit"] {
+    background-color: #2b7cff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1a5ed8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 96px; /* Adjust to match your header height */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px); /* Make it fit below the header */
+    background-color: rgba(0, 0, 0, 0.295);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh; /* Prevents it from going off screen */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adjust based on header height */
+}
+
+button {
+    background-color: #2b7cff;
+    color: white;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1a5ed8;
+    transform: scale(1.03);
+}
+
 body {
     position: relative; /* Necessary for positioning the pseudo-element */
     font-family: 'Gilroy', sans-serif;

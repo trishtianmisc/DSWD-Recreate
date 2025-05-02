@@ -123,7 +123,7 @@
 
 
     <div class="container border-bottom border-top dswd-e-service">
-        <h1 id="MTA">Dswd e-Service -MTA</h1>
+        <h1 id="MTA">DSWD e-Service - MTA</h1>
 
         <div class="red-banner">
             TRAVEL CLEARANCE FOR MINORS TRAVELLING ABROAD
@@ -134,7 +134,7 @@
         </p>
         <div class="faq-item">
             <input type="checkbox" id="faq-toggle">
-            <label for="faq-toggle">
+            <label for="faq-toggle" id="a-hover">
                 How can I use the DSWD eServices in securing Travel Clearance for minors travelling abroad (MTA)?
                 <br>
                 (<em>Paano ko gagamitin ang DSWD eServices sa pagkuha ng Travel Clearance for minors travelling abroad (MTA)?</em>)
@@ -156,7 +156,7 @@
          <!-- FAQ Item 1 -->
          <div class=" faq-item">
             <input type="checkbox" id="faq1">
-            <label for="faq1">
+            <label for="faq1" id="a-hover">
                 What is the Schedule of Availability of Service? (Ano ang iskeydul ng serbisyo?)
             </label>
             <ol>
@@ -178,7 +178,7 @@
         <!-- FAQ Item 2 -->
         <div class="faq-item">
             <input type="checkbox" id="faq2">
-            <label for="faq2">
+            <label for="faq2" id="a-hover">
                 How much is the processing fee in securing Travel Clearance? (Magkano ang bayad sa pagpoproseso ng Travel Clearance?)
             </label>
             <ol>
@@ -191,7 +191,7 @@
         <!-- FAQ Item 3 -->
         <div class="faq-item">
             <input type="checkbox" id="faq3">
-            <label for="faq3">
+            <label for="faq3" id="a-hover">
                 What do I need before I apply? (Ano ang mga kinakailangan bago ako mag-aplay?)
             </label>
             <ol>
@@ -229,6 +229,86 @@
                 <p>The <strong>application for travel clearance</strong>, together with the required supporting documents, shall be submitted by the parent/s or legal guardian or a duly authorized representative to the nearest DSWD regional office. (Ang aplikasyon para sa travel clearance, kasama ng kinakailangang supporting documents, ay isusumite ng magulang / o legal na tagapag-alaga o isang kinatawan, sa pinakamalapit na tanggapan ng rehiyon ng DSWD.) </p>
             </ol>
         </div>
+
+        <div id="formContainer">
+            <h2>DSWD Travel Clearance Online Form</h2>
+            <div class="button-container">
+                <button onclick="openForm()">Open Travel Form</button>
+            </div>
+
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Travel Clearance Form</h2>
+            <form action="form.php" method="POST">
+                <label>Child's Full Name:</label>
+                <input type="text" name="child_name" required>
+
+                <label>Date of Birth:</label>
+                <input type="date" name="dob" required>
+
+                <label>Minor's Address:</label>
+                <textarea name="minor_address" required></textarea>
+
+                <label>Parent(s) Name:</label>
+                <input type="text" name="parent_name" required>
+
+                <label>Parent(s) Address:</label>
+                <textarea name="parent_address" required></textarea>
+
+                <label>Valid For:</label>
+                <select name="validity_period" required>
+                    <option value="1">One (1) Year</option>
+                    <option value="2">Two (2) Years</option>
+                </select>
+
+                <label>Travelling Companion's Name:</label>
+                <input type="text" name="companion_name">
+
+                <label>Travelling Companion's Address:</label>
+                <textarea name="companion_address"></textarea>
+
+                <label>Relationship to Minor:</label>
+                <select name="companion_relationship" required>
+                    <option value="">-- Select Relationship --</option>
+                    <option value="Parent">Parent</option>
+                    <option value="Guardian">Guardian</option>
+                    <option value="Relative">Relative</option>
+                    <option value="Family Friend">Family Friend</option>
+                    <option value="Agency Representative">Agency Representative</option>
+                    <option value="Other">Other</option>
+                </select>
+
+
+                <label>Destination Country:</label>
+                <input type="text" name="destination" placeholder="Germany" required>
+
+                <label>Purpose of Travel:</label>
+                <textarea name="purpose" placeholder="To visit his mother" required></textarea>
+
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("formModal").style.display = "flex";
+        }
+
+        function closeForm() {
+            document.getElementById("formModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside the form
+        window.onclick = function(event) {
+            const modal = document.getElementById("formModal");
+            if (event.target === modal) {
+                closeForm();
+            }
+        }
+    </script>
+
     </div>
 
 
@@ -254,7 +334,7 @@
             <div class="blue-banner"><b>GUIDE IN USING DSWD REGULATORY ESERVICES</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-1">
-                <label for="faq-1" class="centered-label">
+                <label for="faq-1" class="centered-label" id="h-hover">
                     How can I use the DSWD Regulatory eServices for Registration and Licensing of Social Welfare and Development Agencies (SWDAs) and Accreditation of Social Welfare and Development (SWD) programs and services? 
                     (Paano ko gagamitin ang DSWD eServices para sa Pagpaparehistro at Paglilisensya ng Social Welfare and Development Agencies (SWDAs) at Akreditasyon ng Social Welfare and Development (SWD) programa at serbisyo)
                 </label>
@@ -278,7 +358,7 @@
         <div class="faq-item1">
             <div class="outer-box">
                 <input type="checkbox" id="faq-2">
-                <label for="faq-2" class="centered-label">
+                <label for="faq-2" class="centered-label" id="h-hover">
                     What is the timeline in processing Registration, Licensing and Accreditation online application? 
                     (Ano ang timeline ng pagproseso ng Pagpaparehistro, Paglilisensya at Akreditasyon sa online na aplikasyon?)
                 </label>
@@ -299,7 +379,7 @@
             <div class="blue-banner"><b>Processing fee for Registration, Licensing, and Accreditation</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-11">
-                <label for="faq-11" class="centered-label">
+                <label for="faq-11" class="centered-label" id="h-hover">
                     How much is the processing fee for Registration, Licensing and Accreditation? (Magkano ang processing fee para sa Pagpaparehistro, Paglilisensya at Akredistayon?)
                 </label>
                 <ul>
@@ -315,7 +395,7 @@
                 (Ang mga kinakailangang dokumento sa pag-aaplay ng Registrasyon bilang Private Auxiliary Social Welfare and Development Agency at Social Work Agency)</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-12">
-                <label for="faq-12" class="centered-label">
+                <label for="faq-12" class="centered-label" id="h-hover">
                     NEW APPLICATION (BAGONG APLIKASYON)
                 </label>
                 <ol>
@@ -338,7 +418,7 @@
                 (Ang mga kinakailangang dokumento sa pag-aaplay ng Lisensya bilang Private Auxiliary Social Welfare and Development Agency (SWDA)-Intending to Operate)</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-13">
-                <label for="faq-13" class="centered-label">
+                <label for="faq-13" class="centered-label" id="h-hover">
                     NEW APPLICATION (BAGONG APLIKASYON)
                 </label>
                 <ol>
@@ -359,7 +439,7 @@
                 (Ang mga kinakailangang dokumento sa pag-aaplay ng Lisensya bilang Private Auxiliary Social Welfare and Development Agency (SWDA)-Already Implementing)</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-14">
-                <label for="faq-14" class="centered-label">
+                <label for="faq-14" class="centered-label" id="h-hover">
                     NEW AND RENEWAL APPLICATION-ALREADY IMPLEMENTING (BAGONG AT PAG-RENEW NG APLIKASYON-ALREADY IMPLEMENTING)
                 </label>
                 <ol>
@@ -380,7 +460,7 @@
                 (Ang mga kinakailangang dokumento sa pag-aaplay ng Lisensya bilang Social Work Agency-Intending to Operate)</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-15">
-                <label for="faq-15" class="centered-label">
+                <label for="faq-15" class="centered-label" id="h-hover">
                     REQUIREMENTS
                 </label>
                 <ol>
@@ -425,7 +505,7 @@
                 (Ang mga kinakailangang dokumento sa pag-aaplay ng Akreditasyon ng Social Welfare and Development programs and services)</b></div>
             <div class="outer-box">
                 <input type="checkbox" id="faq-16">
-                <label for="faq-16" class="centered-label">
+                <label for="faq-16" class="centered-label" id="h-hover">
                     REQUIREMENTS
                 </label>
                 <ol>
